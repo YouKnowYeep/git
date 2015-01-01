@@ -1,0 +1,10 @@
+CREATE TABLE page(
+url VARCHAR(255) PRIMARY KEY,
+title VARCHAR(100),
+content VARCHAR(200))
+
+CREATE TABLE related(
+id int PRIMARY KEY auto_increment,
+url VARCHAR(255) REFERENCES page(url),
+entryName VARCHAR(100),
+entryUrl VARCHAR(255))
